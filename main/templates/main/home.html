@@ -1,4 +1,31 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
+
+
+
 {% block content%}
-this is home
+{% include "main/master-slider.html" %}
+
+<!--=== Container Part ===-->
+<div class="container content-sm">
+    <!-- Blog Grid -->
+    <div class="row margin-bottom-50">
+    {% for post in post_list %}
+    {% include "blog/post-grid.html" with post=post %}
+    {% endfor %}
+    </div>
+    <!-- Pager v4 -->
+    <ul class="pager pager-v4">
+        <li class="previous"><a class="rounded-3x" href="#">&larr; Older</a></li>
+        <li class="page-amount">1 of 7</li>
+        <li class="next"><a class="rounded-3x" href="#">Newer &rarr;</a></li>
+    </ul>
+    <!-- End Pager v4 -->
+</div>
+<!--=== End Container Part ===-->
+
+
+
+
 {% endblock %}

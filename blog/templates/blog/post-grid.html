@@ -1,0 +1,16 @@
+
+{% load staticfiles %}
+
+<div class="col-sm-4 margin-bottom-50">
+    <div class="blog-grid">
+        <img class="img-responsive" src="{% static 'assets/img/blog/img46.jpg' %}" alt="">
+        <h3><a href="blog_single.html">{{post.title}}</a></h3>
+        <ul class="blog-grid-info">
+            <li>{{post.user}}</li>
+            <li>{{post.created_at}}</li>
+            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+        </ul>
+        <p>{{post.content}}</p>
+        <a class="r-more" href="blog_single.html">Read More</a>
+    </div>
+</div>
