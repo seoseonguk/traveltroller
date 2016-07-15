@@ -1,8 +1,108 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 {% block content%}
-{{ post.title }}
 
+
+    <!-- Container Part -->
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Blog Grid -->
+                <div class="blog-grid margin-bottom-30">
+                    <h2 class="blog-grid-title-lg">{{ post.title }}</h2>
+                    <div class="overflow-h margin-bottom-10">
+                        <ul class="blog-grid-info pull-left">
+                            <li>{{post.user}}</li>
+                            <li>{{post.created_at}}</li>
+                        </ul>
+                        <div class="pull-right">
+                            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                            <div class="addthis_sharing_toolbox"></div>
+                        </div>
+                    </div>
+                    <img class="img-responsive" src="{% static 'assets/img/blog/img3.jpg' %}" alt="">
+                </div>
+                <!-- End Blog Grid -->
+                <p>{{post.content}}</p><br>
+                <span class="single-page-quote single-page-quote-left">
+                    <p>Lorem ipsum dolor sit,
+                        <br>
+                    consectetur adipiscing elit.</p>
+                </span>
+                <div class="clear-right">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In risus neque, semper sed congue eget, ultricies et tortor. Duis lorem libero, dapibus lacinia tellus id, pulvinar rutrum diam. Cras tempor lectus quis erat facilisis, a commodo mi volutpat. Sed vitae libero libero. Vestibulum non leo lobortis, placerat est a, laoreet mauris. Aenean vitae erat interdum, dignissim tellus quis, pellentesque libero. Nullam feugiat magna non justo sodales mattis. Phasellus mattis velit justo, non hendrerit felis tincidunt vitae. In at mi finibus, finibus sem dictum, convallis libero. In condimentum euismod nunc id dapibus. Praesent sagittis posuere felis et viverra. Mauris eros dui, malesuada nec risus nec, placerat porta sem. Suspendisse id quam in ante lobortis fringilla. Aenean euismod ante eget auctor fringilla. Morbi consequat ut felis a scelerisque. Aliquam purus sem, rutrum sit amet ligula a, tristique porttitor mauris.</p><br>
+                </div>
+                <div class="clear-both">
+                    <img class="blog-grid-img-v1" src="assets/img/masonry/img2.jpg" alt="">
+                    <p>Proin laoreet massa vitae pulvinar accumsan. Aenean auctor ipsum mauris, et sodales odio tristique non. Quisque eget diam a mi condimentum ullamcorper imperdiet sed urna. Pellentesque cursus convallis blandit. Mauris lorem eros, consequat et rutrum id, vestibulum quis felis. Proin non mollis eros. Curabitur vel laoreet mauris.</p><br>
+                </div>
+                <p>Praesent ultrices, enim a varius condimentum, nunc elit rhoncus ligula, quis fringilla risus augue sit amet enim. Curabitur dolor elit, egestas eget lectus vel, pretium semper tellus. Nunc urna lectus, vulputate ut tellus aliquam, pharetra consectetur enim. Nunc scelerisque libero diam, nec tempor justo hendrerit eu. Donec sed diam mattis, ullamcorper eros eu, aliquam dui. Maecenas rutrum suscipit risus sed posuere. Vestibulum imperdiet turpis mauris, sit amet consectetur ex porttitor ut. Duis sit amet auctor nunc.</p><br>
+                <p>Mauris et porttitor diam. In semper volutpat mauris, ac fermentum orci commodo vitae. Curabitur ut feugiat tellus. Quisque consequat pharetra massa ultricies auctor. Sed mollis vulputate sapien eget tincidunt. Curabitur tempus lacus a sapien rutrum, feugiat blandit nunc tincidunt. Donec nec ornare tellus. In neque ipsum, auctor eu bibendum cursus, fringilla sed magna. Vestibulum lobortis libero et lectus congue efficitur. Suspendisse varius varius finibus. Maecenas luctus convallis euismod.</p><br>
+                <p>Praesent ultrices, enim a varius condimentum, nunc elit rhoncus ligula, quis fringilla risus augue sit amet enim. Curabitur dolor elit, egestas eget lectus vel, pretium semper tellus. Nunc urna lectus, vulputate ut tellus aliquam, pharetra consectetur enim. Nunc scelerisque libero diam, nec tempor justo hendrerit eu. Donec sed diam mattis, ullamcorper eros eu, aliquam dui. Maecenas rutrum suscipit risus sed posuere. Vestibulum imperdiet turpis mauris, sit amet consectetur ex porttitor ut. Duis sit amet auctor nunc.</p><br>
+                <span class="single-page-quote single-page-quote-right">
+                    <p>Nunc urna lectus,
+                        <br>
+                    vulputate ut tellus aliquam.</p>
+                </span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In risus neque, semper sed congue eget, ultricies et tortor. Duis lorem libero, dapibus lacinia tellus id, pulvinar rutrum diam. Cras tempor lectus quis erat facilisis, a commodo mi volutpat. Sed vitae libero libero. Vestibulum non leo lobortis, placerat est a, laoreet mauris. Aenean vitae erat interdum, dignissim tellus quis, pellentesque libero. Nullam feugiat magna non justo sodales mattis. Phasellus mattis velit justo, non hendrerit felis tincidunt vitae. In at mi finibus, finibus sem dictum, convallis libero. In condimentum euismod nunc id dapibus.</p><br>
+                <p>Praesent sagittis posuere felis et viverra. Mauris eros dui, malesuada nec risus nec, placerat porta sem. Suspendisse id quam in ante lobortis fringilla. Aenean euismod ante eget auctor fringilla. Morbi consequat ut felis a scelerisque. Aliquam purus sem, rutrum sit amet ligula a, tristique porttitor mauris.</p><br>
+                <img class="img-responsive margin-bottom-30" src="assets/img/masonry/img1.jpg" alt="">
+                <p>Praesent ultrices, enim a varius condimentum, nunc elit rhoncus ligula, quis fringilla risus augue sit amet enim. Curabitur dolor elit, egestas eget lectus vel, pretium semper tellus. Nunc urna lectus, vulputate ut tellus aliquam, pharetra consectetur enim. Nunc scelerisque libero diam, nec tempor justo hendrerit eu. Donec sed diam mattis, ullamcorper eros eu, aliquam dui. Maecenas rutrum suscipit risus sed posuere. Vestibulum imperdiet turpis mauris, sit amet consectetur ex porttitor ut. Duis sit amet auctor nunc.</p><br>
+                <p>Mauris et porttitor diam. In semper volutpat mauris, ac fermentum orci commodo vitae. Curabitur ut feugiat tellus. Quisque consequat pharetra massa ultricies auctor. Sed mollis vulputate sapien eget tincidunt. Curabitur tempus lacus a sapien rutrum, feugiat blandit nunc tincidunt. Donec nec ornare tellus. In neque ipsum, auctor eu bibendum cursus, fringilla sed magna. Vestibulum lobortis libero et lectus congue efficitur. Suspendisse varius varius finibus. Maecenas luctus convallis euismod. Praesent ultrices, enim a varius condimentum, nunc elit rhoncus ligula, quis fringilla risus augue sit amet enim. Curabitur dolor elit, egestas eget lectus vel, pretium semper tellus. Nunc urna lectus, vulputate ut tellus aliquam, pharetra consectetur enim. Nunc scelerisque libero diam, nec tempor justo hendrerit eu. Donec sed diam mattis, ullamcorper eros eu, aliquam dui. Maecenas rutrum suscipit risus sed posuere. Vestibulum imperdiet turpis mauris, sit amet consectetur ex porttitor ut. Duis sit amet auctor nunc.</p><br>
+
+                <!-- Blog Grid Tagds -->
+                <ul class="blog-grid-tags">
+                   <li class="head">Tags</li>
+                   <li><a href="#">Hi-Tech</a></li>
+                   <li><a href="#">Gadgets</a></li>
+                   <li><a href="#">Study</a></li>
+                   <li><a href="#">Skills</a></li>
+                </ul>
+                <!-- End Blog Grid Tagds -->
+{% include "blog/post_related.html" %}
+                <!-- Blog Comments v2 -->
+{% include "blog/post_comment.html" %}
+
+                <!-- Form -->
+                <h2 class="title-v4">Post a Comment</h2>
+                <form action="assets/php/sky-forms-pro/demo-comment-process.php" method="post" id="sky-form3" class="sky-form comment-style-v2">
+                    <fieldset>
+                        <div class="row sky-space-30">
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="text" name="name" id="name" placeholder="Name" class="form-control bg-color-light">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="text" name="email" id="email" placeholder="Email" class="form-control bg-color-light">
+                                </div>
+                            </div>
+                        </div>
+                                                    <br / >
+
+                        <div class="sky-space-30">
+                            <div>
+                                <textarea rows="8" name="message" id="message" placeholder="Write comment here ..." class="form-control bg-color-light"></textarea>
+                            </div>
+                        </div>
+                        <br / >
+                        <p><button type="submit" class="btn-u btn-u-default">Submit</button></p>
+                    </fieldset>
+
+                    <div class="message">
+
+                        <p><i class="rounded-x fa fa-check"></i> Your comment was successfully posted!</p>
+                    </div>
+                </form>
+                <!-- End Form -->
+            </div>
+
+
+        </div>
+    </div>
+    <!--=== End Container Part ===-->
 {{post.id }}
 
 {% endblock %}
