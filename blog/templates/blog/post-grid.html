@@ -3,7 +3,7 @@
 
 <div class="col-sm-4 margin-bottom-50">
     <div class="blog-grid">
-        <img class="img-responsive" src="{% static 'assets/img/blog/img46.jpg' %}" alt="">
+        <img class="img-responsive" src="{{ post.image.url }}" alt="">
         <h3><a href="blog_single.html">{{post.title}}</a></h3>
         <ul class="blog-grid-info">
             <li>{{post.user}}</li>
