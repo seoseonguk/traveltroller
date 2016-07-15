@@ -21,6 +21,7 @@ class Post(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     content = models.TextField()
     image = models.ImageField(upload_to=image_upload_to_post, blank=True)
+    post_tags = models.ManyToManyField('PostTag')
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -28,3 +29,8 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+class PostTag(models.Model):
+    title = models.CharField(max_length=120)
+
+    def __str__(self):
+        return self.title
