@@ -4,13 +4,13 @@
 <div class="col-sm-4 margin-bottom-50">
     <div class="blog-grid">
         <img class="img-responsive" src="{{ post.image.url }}" alt="">
-        <h3><a href="blog_single.html">{{post.title}}</a></h3>
+        <h3><a href="{% url 'blog:post_detail' post.id %}">{{post.title}}</a></h3>
         <ul class="blog-grid-info">
             <li>{{post.user}}</li>
             <li>{{post.created_at}}</li>
-            <li><a href="#"><i class="fa fa-comments"></i> 0</a></li>
+            <li><a href="#"><i class="fa fa-comments"></i>0</a></li>
         </ul>
         <p>{{post.content}}</p>
-        <a class="r-more" href="blog_single.html">Read More</a>
+        <a class="r-more" href="{% url 'blog:post_detail' post.id %}">Read More</a>
     </div>
 </div>
